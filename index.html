@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ハッピーガーデン ブラックフライデー</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --soil:#1f1813;      /* 黒い土 */
+  --soil-2:#2b211a;
+  --soil-3:#3a2c22;
+  --cream:#fff7e8;
+  --cream-2:#fbecd2;
+  --ink:#3a2a1f;
+  --pink:#f59ab2;
+  --pink-d:#e0688a;
+  --butter:#ffd76a;
+  --mint:#9ad8b3;
+  --lilac:#b7a3ee;
+  --leaf:#5fae6e;
+  --leaf-d:#3f8a52;
+  --red:#e8475f;
+  --col:720px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;
+  color:var(--ink);background:var(--soil);
+  background-image:radial-gradient(rgba(255,240,220,.06) 1.2px,transparent 1.4px);
+  background-size:22px 22px;
+  line-height:1.8;letter-spacing:.05em;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.page{max-width:var(--col);margin:0 auto;overflow:hidden;background:var(--soil)}
+.en{font-family:"Jost",sans-serif;letter-spacing:.08em}
+
+/* ===== FV ===== */
+.fv{position:relative;padding:44px 0 0;color:var(--cream);text-align:center}
+.fv-top{display:flex;justify-content:space-between;align-items:center;padding:0 24px;font-size:15px}
+.fv-top .shop{font-weight:700;letter-spacing:.12em}
+.fv-top .th{font-family:"Jost";font-weight:600;color:var(--butter);letter-spacing:.14em}
+.fv-20{margin:38px auto 0;display:flex;align-items:center;justify-content:center;gap:14px}
+.fv-20 b{font-family:"Jost";font-weight:700;font-size:min(22vw,150px);line-height:.8;color:var(--butter);letter-spacing:0}
+.fv-20 b sup{font-size:.32em;vertical-align:top;position:relative;top:.25em;margin-left:.04em}
+.fv-20 span{text-align:left;font-size:18px;line-height:1.6;font-weight:700}
+.fv-20 span em{font-style:normal;display:block;font-family:"Jost";font-size:14px;letter-spacing:.2em;color:var(--pink)}
+.fv-bf{margin-top:26px;font-family:"Jost";font-weight:700;font-size:min(14.5vw,104px);line-height:.92;letter-spacing:.02em}
+.fv-bf .l2{display:block;color:var(--pink)}
+.fv-catch{margin-top:26px;font-size:min(6.4vw,34px);font-weight:700;line-height:1.5}
+.fv-catch .sp{display:none}
+.fv-sub{margin-top:10px;font-size:18px;opacity:.9}
+.fv-garden{display:block;width:100%;height:auto;margin-top:18px}
+/* 芽が伸びる */
+.stem{stroke-dasharray:200;stroke-dashoffset:200;animation:grow 1.4s ease-out forwards}
+.bloom{transform-box:fill-box;transform-origin:50% 100%;transform:scale(0);animation:pop .6s cubic-bezier(.3,1.6,.5,1) forwards}
+.root{stroke-dasharray:80;stroke-dashoffset:80;animation:grow 1.2s ease-out forwards}
+@keyframes grow{to{stroke-dashoffset:0}}
+@keyframes pop{to{transform:scale(1)}}
+.sway{transform-box:fill-box;transform-origin:50% 100%;animation:sway 4s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+.fv-under{background:var(--soil-2);padding:4px 20px 30px;color:var(--cream)}
+.fv-under p{font-size:17px;opacity:.9}
+.sp2{display:none}
+@media (max-width:600px){.sp2{display:inline}}
+.fv-under .arrow{display:inline-block;margin-top:14px;font-family:"Jost";font-size:14px;letter-spacing:.3em;color:var(--butter)}
+.fv-under .arrow::after{content:"";display:block;width:1px;height:34px;background:var(--butter);margin:8px auto 0;animation:drop 1.8s ease-in-out infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ===== 共通見出し ===== */
+.sec{position:relative;padding:60px 20px;text-align:center}
+.kicker{font-family:"Jost";font-weight:600;font-size:15px;letter-spacing:.22em}
+.h2{font-size:min(8vw,42px);line-height:1.4;font-weight:700;margin-top:6px}
+.lead{margin-top:14px;font-size:17px}
+
+/* ===== プレゼント(黄色) ===== */
+.present{background:#ffd84a;color:var(--ink);overflow:hidden}
+.present::before{content:"";position:absolute;left:50%;top:120px;width:1100px;height:1100px;margin-left:-550px;
+  background:repeating-conic-gradient(from 0deg,rgba(255,255,255,.4) 0 7.5deg,transparent 7.5deg 15deg);
+  border-radius:50%;animation:spin 60s linear infinite;pointer-events:none;
+  -webkit-mask:radial-gradient(circle,#000 25%,transparent 62%);mask:radial-gradient(circle,#000 25%,transparent 62%)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.present>*{position:relative}
+.present .kicker{color:var(--red)}
+.present .petal{position:absolute;top:-20px;width:12px;height:16px;border-radius:50% 50% 50% 0;opacity:.9;animation:fall linear infinite;pointer-events:none}
+@keyframes fall{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(2600px) rotate(720deg)}}
+.present-head{margin-top:10px}
+.present-head .s{font-size:min(5.6vw,26px);font-weight:700}
+.present-head .num{display:flex;justify-content:center;align-items:flex-end;gap:6px;line-height:.8;margin-top:10px}
+.present-head .num b{font-family:"Jost";font-weight:700;font-size:min(42vw,200px);color:var(--red);letter-spacing:0}
+.present-head .num small{font-size:min(9vw,46px);font-weight:700;margin-bottom:.2em}
+.present-head .h2{margin-top:16px}
+.present-head .h2 em{font-style:normal;background:linear-gradient(transparent 62%,#fff 62%)}
+.gift{margin:30px auto 0;max-width:520px;background:#fff;border-radius:28px;padding:22px 20px 26px;border:3px solid var(--ink);box-shadow:0 8px 0 var(--ink)}
+.gift-img{display:block;border-radius:18px;overflow:hidden;background:#fff;aspect-ratio:1/1;max-width:100%}
+.gift-img img{width:100%;height:100%;object-fit:contain}
+.gift-txt .tag{display:inline-block;margin-top:16px;font-size:15px;font-weight:700;background:var(--red);color:#fff;padding:2px 16px;border-radius:99px}
+.gift-txt h3{font-size:min(6vw,28px);line-height:1.45;margin-top:10px}
+.gift-txt p{font-size:17px;margin-top:8px}
+.gift-txt .more{display:inline-block;margin-top:16px;font-size:17px;font-weight:700;background:var(--ink);color:#fff;padding:12px 30px;border-radius:99px}
+
+/* ステップ */
+.steps{margin:44px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:680px}
+.step{background:var(--cream);border-radius:22px;padding:22px 12px 20px;display:flex;flex-direction:column;align-items:center}
+.step .n{flex:none;width:50px;height:50px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-family:"Jost";font-weight:700;font-size:24px}
+.step h4{font-size:19px;line-height:1.5;margin-top:10px}
+.step h4 b{color:var(--red);font-family:"Jost";font-size:1.4em;letter-spacing:.02em}
+.step p{font-size:15px;margin-top:6px}
+
+/* ひみつのキーワード */
+.secret{margin:48px auto 0;max-width:560px;background:var(--soil);color:var(--cream);border-radius:28px 28px 28px 28px;padding:40px 22px 34px;text-align:center;position:relative;overflow:hidden}
+.secret .kicker{color:var(--butter)}
+.secret h3{font-size:min(6.4vw,30px);margin-top:6px;line-height:1.45}
+.dig{position:relative;height:170px;margin:26px auto 0;max-width:440px}
+.plaque{position:absolute;left:50%;bottom:22px;transform:translate(-50%,70px);opacity:0;transition:transform .9s cubic-bezier(.3,1.4,.5,1),opacity .4s;width:min(100%,340px)}
+.plaque .board{background:var(--cream);color:var(--ink);border:3px solid var(--butter);border-radius:16px;padding:16px 10px;font-size:min(8.4vw,36px);font-weight:700;letter-spacing:.08em;line-height:1.2}
+.plaque .stick{width:12px;height:30px;background:#a7774d;margin:0 auto}
+.mound{position:absolute;left:0;right:0;bottom:0;height:150px;transition:transform .8s ease-in,opacity .8s}
+.mound svg{width:100%;height:100%}
+.dig.open .mound{transform:translateY(120px);opacity:0}
+.dig.open .plaque{transform:translate(-50%,0);opacity:1}
+.btn-dig{margin-top:22px;font:inherit;font-weight:700;font-size:18px;color:var(--ink);background:var(--butter);border:0;border-radius:99px;padding:14px 38px;cursor:pointer;box-shadow:0 5px 0 #c89a1f;transition:transform .1s,box-shadow .1s}
+.btn-dig:active{transform:translateY(4px);box-shadow:0 1px 0 #c89a1f}
+.secret .copied{margin-top:10px;font-size:16px;min-height:1.6em;color:var(--mint)}
+.secret .memo{margin-top:12px;font-size:16px;opacity:.9}
+
+/* ===== 3,000円のかご ===== */
+.basket{background:var(--soil-2);color:var(--cream)}
+.basket .kicker{color:var(--mint)}
+.basket .h2 b{color:var(--butter);font-family:"Jost";font-size:1.2em;letter-spacing:.02em}
+.combo{margin:28px auto 0;display:grid;gap:12px;max-width:560px}
+.combo a{display:flex;flex-direction:column;align-items:center;gap:2px;border-top:1px dashed rgba(255,247,232,.35);padding:16px 4px 4px}
+.combo .items{font-size:18px;font-weight:700;line-height:1.6}
+.combo .items small{display:block;font-weight:500;font-size:15px;opacity:.85}
+.combo .sum{font-family:"Jost";font-weight:700;font-size:32px;color:var(--butter);letter-spacing:.02em;white-space:nowrap}
+.combo .sum span{font-size:.5em;font-family:"Zen Maru Gothic"}
+.basket .note{margin-top:18px;font-size:14px;opacity:.8}
+
+/* ===== 球根 ===== */
+.bulbs{background:var(--cream)}
+.bulbs .kicker{color:var(--leaf-d)}
+.group{margin-top:40px}
+.group-h{display:flex;flex-direction:column;align-items:center;gap:0;border-bottom:3px solid var(--ink);padding-bottom:10px}
+.group-h h3{font-size:24px}
+.group-h span{font-size:16px;opacity:.85}
+.big{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px 14px}
+.item .ph{aspect-ratio:1/1;background:#fff;border-radius:16px;overflow:hidden}
+.item .ph img{width:100%;height:100%;object-fit:contain;transition:transform .4s}
+.item:hover .ph img{transform:scale(1.04)}
+.item .nm{margin-top:8px;font-size:16px;font-weight:700;line-height:1.5}
+.item .pr{font-family:"Jost";font-weight:700;font-size:24px;color:var(--red);letter-spacing:.02em}
+.item .pr span{font-size:.62em;font-family:"Zen Maru Gothic"}
+.big .item .nm{font-size:17px}
+.big .item .pr{font-size:28px}
+.item .pt{display:inline-block;margin-top:4px;font-size:14px;font-weight:700;color:var(--leaf-d);border:1.5px solid var(--leaf);border-radius:99px;padding:0 9px}
+.rare{margin:20px auto 0;display:flex;flex-direction:column;align-items:center;gap:14px;max-width:480px}
+.rare .ph{width:min(70%,280px);aspect-ratio:1/1;background:#fff;border-radius:50%;overflow:hidden;border:3px solid var(--mint)}
+.rare .ph img{width:100%;height:100%;object-fit:contain}
+.rare h4{font-size:22px;line-height:1.5}
+.rare p{font-size:17px;margin-top:6px}
+.rare .pr{font-family:"Jost";font-weight:700;font-size:26px;color:var(--red);margin-top:6px}
+.rare .pr span{font-size:.55em;font-family:"Zen Maru Gothic"}
+.price-note{margin-top:26px;font-size:14px;opacity:.8}
+
+/* ===== 最後 ===== */
+.last{background:var(--soil);color:var(--cream);text-align:center;padding:60px 20px 44px}
+.last .h2 .p{color:var(--pink)}
+.last-key{margin:22px auto 0;display:inline-block;border:2px dashed var(--butter);border-radius:14px;padding:12px 26px;font-size:17px}
+.last-key b{display:block;font-size:30px;color:var(--butter);letter-spacing:.08em}
+.cta{display:grid;gap:14px;margin:36px auto 0;max-width:440px}
+.cta a{display:block;padding:18px 10px;border-radius:99px;font-weight:700;font-size:18px}
+.cta .main{background:var(--pink);color:var(--soil);box-shadow:0 5px 0 var(--pink-d)}
+.cta .sub{border:2px solid var(--cream)}
+.notes{margin:44px auto 0;max-width:560px;text-align:left;font-size:15px;line-height:1.8;opacity:.85;border-top:1px solid rgba(255,247,232,.2);padding-top:24px}
+.notes h4{font-size:17px;margin-bottom:6px;text-align:center}
+.notes li{list-style:none;padding-left:1em;text-indent:-1em}
+.notes li::before{content:"・"}
+.foot{margin-top:32px;font-family:"Jost";font-size:14px;letter-spacing:.2em;opacity:.6}
+
+/* スクロールで出る */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.rv.on{opacity:1;transform:none}
+
+@media (max-width:600px){
+  .fv{padding-top:28px}
+  .fv-top{padding:0 16px;font-size:12px}
+  .fv-catch .sp{display:inline}
+  .sec{padding:52px 16px}
+  .steps{grid-template-columns:1fr;gap:10px}
+  .step{flex-direction:row;justify-content:flex-start;gap:16px;padding:16px 12px 16px 28px}
+  .step h4{margin:0;text-align:left;font-size:19px}
+  .step h4 br.pc{display:none}
+  .step p{text-align:left;margin-top:2px}
+  .gift{padding:16px 14px 22px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .big{grid-template-columns:1fr 1fr;gap:12px}
+  .big .item .nm{font-size:16px}
+  .big .item .pr{font-size:24px}
+  .item .nm{font-size:15px}
+  .present-head .h2{font-size:7.2vw}
+  .group-h h3{font-size:20px}
+  .basket .h2{font-size:7.4vw}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .stem,.root{stroke-dashoffset:0}.bloom{transform:none}.rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ===== FV ===== -->
+<header class="fv">
+  <div class="fv-top"><span class="shop">ハッピーガーデン</span><span class="th">THANK YOU 20th</span></div>
+
+  <div class="fv-20"><b>20<sup>th</sup></b><span><em>ANNIVERSARY</em>ありがとうの<br>20周年</span></div>
+  <h1 class="fv-bf">BLACK<span class="l2">FRIDAY</span></h1>
+  <p class="fv-catch">黒い土の中で<br class="sp"> 春が待ってる</p>
+  <p class="fv-sub">球根と花苗の ブラックフライデー</p>
+
+  <svg class="fv-garden" viewBox="0 0 720 330" aria-hidden="true">
+    <defs>
+      <g id="tulip"><path transform="scale(1.6)" d="M-14 -16 Q-15 6 0 8 Q15 6 14 -16 L7 -8 L0 -20 L-7 -8 Z"/></g>
+      <g id="crocus"><path transform="scale(1.6)" d="M0 8 Q-12 0 -9 -18 Q-2 -12 0 -22 Q2 -12 9 -18 Q12 0 0 8Z"/></g>
+      <g id="daisy" transform="scale(1.5)">
+        <circle r="7" cx="0" cy="-13"/><circle r="7" cx="12" cy="-4"/><circle r="7" cx="8" cy="10"/><circle r="7" cx="-8" cy="10"/><circle r="7" cx="-12" cy="-4"/>
+      </g>
+      <g id="bulb"><path d="M0 -26 Q3 -14 14 -6 Q24 4 16 14 Q0 22 -16 14 Q-24 4 -14 -6 Q-3 -14 0 -26Z"/></g>
+    </defs>
+
+    <!-- 地面より下(土) -->
+    <path d="M0 176 Q90 162 180 174 T360 172 T540 174 T720 170 V330 H0Z" fill="#2b211a"/>
+    <g fill="#4a382b">
+      <circle cx="60" cy="210" r="3"/><circle cx="130" cy="290" r="2.5"/><circle cx="250" cy="250" r="3"/><circle cx="330" cy="305" r="2"/><circle cx="430" cy="220" r="2.5"/><circle cx="520" cy="300" r="3"/><circle cx="610" cy="235" r="2.5"/><circle cx="690" cy="290" r="2"/><circle cx="200" cy="200" r="2"/><circle cx="470" cy="275" r="2"/>
+    </g>
+
+    <!-- 1 チューリップ ピンク -->
+    <g>
+      <path class="stem" d="M110 262 Q104 200 112 98" stroke="#7cc58a" stroke-width="5" fill="none" stroke-linecap="round" style="animation-delay:.2s"/>
+      <path class="stem" d="M110 168 Q82 150 86 124" stroke="#7cc58a" stroke-width="5" fill="none" stroke-linecap="round" style="animation-delay:.8s"/>
+      <g class="sway"><use href="#tulip" class="bloom" x="112" y="96" fill="#f59ab2" style="animation-delay:1.3s" transform="translate(0,0)"/></g>
+      <use href="#bulb" x="110" y="276" fill="#e9c9a3"/>
+      <path class="root" d="M100 294 q-6 12 -2 24 M110 296 v26 M120 294 q6 12 2 22" stroke="#e9c9a3" stroke-width="2.5" fill="none" stroke-linecap="round" style="animation-delay:.1s"/>
+    </g>
+    <!-- 2 クロッカス 紫 -->
+    <g>
+      <path class="stem" d="M230 270 Q236 210 228 140" stroke="#7cc58a" stroke-width="4" fill="none" stroke-linecap="round" style="animation-delay:.5s"/>
+      <g class="sway" style="animation-delay:-1s"><use href="#crocus" class="bloom" x="228" y="136" fill="#b7a3ee" style="animation-delay:1.6s"/></g>
+      <use href="#bulb" x="230" y="282" fill="#d9b48c" transform="scale(1)"/>
+      <path class="root" d="M222 300 q-4 10 0 18 M238 300 q5 10 1 18" stroke="#d9b48c" stroke-width="2.5" fill="none" stroke-linecap="round" style="animation-delay:.3s"/>
+    </g>
+    <!-- 3 デイジー 黄 -->
+    <g>
+      <path class="stem" d="M360 258 Q352 180 362 76" stroke="#7cc58a" stroke-width="5" fill="none" stroke-linecap="round" style="animation-delay:.3s"/>
+      <path class="stem" d="M358 160 Q392 140 392 112" stroke="#7cc58a" stroke-width="5" fill="none" stroke-linecap="round" style="animation-delay:.9s"/>
+      <g class="sway" style="animation-delay:-2s"><g class="bloom" style="animation-delay:1.4s"><use href="#daisy" x="362" y="74" fill="#fff7e8"/><circle cx="362" cy="74" r="10" fill="#ffd76a"/></g></g>
+      <use href="#bulb" x="360" y="272" fill="#f0d2ad"/>
+      <path class="root" d="M348 290 q-8 10 -4 26 M360 292 v28 M372 290 q8 12 2 24" stroke="#f0d2ad" stroke-width="2.5" fill="none" stroke-linecap="round" style="animation-delay:.2s"/>
+    </g>
+    <!-- 4 チューリップ 黄 -->
+    <g>
+      <path class="stem" d="M490 266 Q498 200 488 120" stroke="#7cc58a" stroke-width="5" fill="none" stroke-linecap="round" style="animation-delay:.6s"/>
+      <g class="sway" style="animation-delay:-.6s"><use href="#tulip" class="bloom" x="488" y="118" fill="#ffd76a" style="animation-delay:1.8s"/></g>
+      <use href="#bulb" x="490" y="280" fill="#e9c9a3"/>
+      <path class="root" d="M480 298 q-6 10 -2 20 M492 300 v22 M502 298 q6 10 2 20" stroke="#e9c9a3" stroke-width="2.5" fill="none" stroke-linecap="round" style="animation-delay:.4s"/>
+    </g>
+    <!-- 5 クロッカス ミント/白 -->
+    <g>
+      <path class="stem" d="M612 268 Q604 214 614 150" stroke="#7cc58a" stroke-width="4" fill="none" stroke-linecap="round" style="animation-delay:.4s"/>
+      <g class="sway" style="animation-delay:-3s"><use href="#crocus" class="bloom" x="614" y="146" fill="#f59ab2" style="animation-delay:1.5s"/></g>
+      <use href="#bulb" x="612" y="282" fill="#d9b48c"/>
+      <path class="root" d="M604 300 q-5 10 -1 18 M620 300 q5 10 1 18" stroke="#d9b48c" stroke-width="2.5" fill="none" stroke-linecap="round" style="animation-delay:.5s"/>
+    </g>
+    <!-- 小さい芽 -->
+    <g stroke="#7cc58a" stroke-width="4" fill="none" stroke-linecap="round">
+      <path class="stem" d="M40 178 q-2 -16 6 -24" style="animation-delay:1s"/>
+      <path class="stem" d="M296 176 q2 -14 -6 -22" style="animation-delay:1.2s"/>
+      <path class="stem" d="M556 176 q-2 -16 6 -22" style="animation-delay:1.1s"/>
+      <path class="stem" d="M680 174 q2 -14 -6 -22" style="animation-delay:1.3s"/>
+    </g>
+  </svg>
+
+  <div class="fv-under">
+    <p>今のうちに植えておけば<br class="sp2"> 春にはお庭がにぎやかに<br>20年分の「ありがとう」をこめた<br class="sp2">ブラックフライデーです</p>
+    <a class="arrow en" href="#present">SCROLL</a>
+  </div>
+</header>
+
+<!-- ===== 20周年プレゼント ===== -->
+<section class="sec present" id="present">
+  <span class="petal" style="left:6%;background:#fff;animation-duration:14s"></span>
+  <span class="petal" style="left:22%;background:#f59ab2;animation-duration:18s;animation-delay:-6s"></span>
+  <span class="petal" style="left:48%;background:#fff;animation-duration:16s;animation-delay:-10s"></span>
+  <span class="petal" style="left:70%;background:#e8475f;animation-duration:20s;animation-delay:-3s"></span>
+  <span class="petal" style="left:88%;background:#fff;animation-duration:15s;animation-delay:-8s"></span>
+  <span class="petal" style="left:36%;background:#f59ab2;animation-duration:17s;animation-delay:-13s"></span>
+  <p class="kicker rv">20th ANNIVERSARY PRESENT</p>
+  <div class="present-head rv">
+    <p class="s">20周年のありがとうをこめて<br>抽選で</p>
+    <div class="num"><b>5</b><small>名様</small></div>
+    <h2 class="h2"><em>イングリッシュガーデン</em><br>をプレゼント</h2>
+  </div>
+
+  <div class="gift rv">
+    <a class="gift-img" href="https://item.rakuten.co.jp/wfgarden/omakase-english9pchiba/" target="_blank" rel="noopener">
+      <img src="https://shop.r10s.jp/wfgarden/cabinet/hananae/englishgarden/6nae/ing6_02.jpg" alt="イングリッシュガーデン花苗6苗セット 配置マップ付き" loading="lazy">
+    </a>
+    <div class="gift-txt">
+      <span class="tag">楽天1位</span>
+      <h3>植えるだけで庭が完成<br>イングリッシュガーデン<br>花苗6苗セット</h3>
+      <p>1m×50cmの花壇にぴったりの<br class="sp2">配置マップ付き<br>はじめてさんでも<br class="sp2">植えるだけでお庭が完成</p>
+      <a class="more" href="https://item.rakuten.co.jp/wfgarden/omakase-english9pchiba/" target="_blank" rel="noopener">プレゼントの中身を見る</a>
+    </div>
+  </div>
+
+  <div class="steps">
+    <div class="step rv"><span class="n">1</span>
+      <div><h4>期間中<br class="pc"><b>3,000</b>円以上<br>お買い上げ</h4><p>店内どの商品でもOK</p></div>
+    </div>
+    <div class="step rv"><span class="n">2</span>
+      <div><h4>備考欄に<br>ひみつの<br class="pc">キーワード</h4><p>下で掘りだしてね</p></div>
+    </div>
+    <div class="step rv"><span class="n">3</span>
+      <div><h4>抽選で<br class="pc">5名様に<br>お届け</h4><p>発送で当選をお知らせ</p></div>
+    </div>
+  </div>
+
+  <div class="secret rv" id="keyword">
+    <p class="kicker">SECRET KEYWORD</p>
+    <h3>ひみつのキーワードは<br>土の中にうまってます</h3>
+    <div class="dig" id="dig">
+      <div class="plaque" aria-live="polite">
+        <div class="board" id="kw">ハッピーガーデン</div>
+        <div class="stick"></div>
+      </div>
+      <div class="mound" aria-hidden="true">
+        <svg viewBox="0 0 440 150" preserveAspectRatio="none">
+          <path d="M0 150 Q30 40 140 30 Q220 0 300 30 Q410 40 440 150Z" fill="#5a4332"/>
+          <path d="M40 150 Q70 70 160 60 Q230 40 290 62 Q380 76 400 150Z" fill="#4a382b"/>
+          <g fill="#6d5340"><circle cx="120" cy="80" r="5"/><circle cx="250" cy="50" r="4"/><circle cx="330" cy="96" r="5"/><circle cx="190" cy="110" r="4"/></g>
+          <path d="M220 28 q-2 -16 8 -24 M220 28 q4 -12 -6 -20" stroke="#7cc58a" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+    <button class="btn-dig" id="btnDig" type="button">土をほってみる</button>
+    <p class="copied" id="copied"></p>
+    <p class="memo">ご注文時の「備考欄」に<br>このキーワードを<br class="sp2">そのまま入れてください</p>
+  </div>
+</section>
+
+<!-- ===== 3,000円かご ===== -->
+<section class="sec basket">
+  <p class="kicker rv">BASKET IDEA</p>
+  <h2 class="h2 rv">あと少しで <b>3,000</b>円<br>こんな組み合わせも</h2>
+  <div class="combo">
+    <a class="rv" href="https://item.rakuten.co.jp/wfgarden/tulipflowerpot/" target="_blank" rel="noopener">
+      <span class="items">球根福袋45球 ＋ ムスカリ<small>ばらまくだけの福袋に、青い小花をちょい足し</small></span>
+      <span class="sum">3,479<span>円〜</span></span>
+    </a>
+    <a class="rv" href="https://item.rakuten.co.jp/wfgarden/tulip-7mix40q/" target="_blank" rel="noopener">
+      <span class="items">バラエティチューリップ30球<small>これ1つでクリア 6種以上のチューリップ</small></span>
+      <span class="sum">3,960<span>円</span></span>
+    </a>
+    <a class="rv" href="https://item.rakuten.co.jp/wfgarden/crocusromance/" target="_blank" rel="noopener">
+      <span class="items">小球根を6種えらんで<small>クロッカス2種・プスキニア・ムスカリ・原種チューリップ2種</small></span>
+      <span class="sum">3,194<span>円〜</span></span>
+    </a>
+  </div>
+  <p class="note rv">※いずれも最小セットでの合計の目安です。価格は変わる場合があるので、各商品ページでご確認ください</p>
+</section>
+
+<!-- ===== おすすめ球根 ===== -->
+<section class="sec bulbs">
+  <p class="kicker rv">RECOMMENDED BULBS</p>
+  <h2 class="h2 rv">いま植えたい<br>おすすめ球根</h2>
+  <p class="lead rv">冬のあいだ土の中でじっくり育って 春にいっせいに咲きます</p>
+
+  <div class="group">
+    <div class="group-h rv"><h3>まずはたっぷりセットで</h3><span>花壇がにぎやかに</span></div>
+    <div class="big">
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/tulipflowerpot/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/smallbulb/baramakib20_01.jpg" alt="ばらまき球根福袋" loading="lazy"></div>
+        <p class="nm">ばらまき<br>球根福袋<br>7〜8種類 45球</p>
+        <p class="pr">2,980<span>円</span></p>
+        <span class="pt">植えっぱなしOK</span>
+      </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/tulip-7mix40q/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/tulip/tulip50-2.jpg" alt="バラエティチューリップセット" loading="lazy"></div>
+        <p class="nm">バラエティ<br>チューリップ<br>6種以上 30球</p>
+        <p class="pr">3,960<span>円</span></p>
+        <span class="pt">1つで条件クリア</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="group-h rv"><h3>毎年咲く小さな球根</h3><span>植えっぱなしでOK</span></div>
+    <div class="grid">
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/crocusromance/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/crocus/romance2_01.jpg" alt="原種クロッカス ロマンス" loading="lazy"></div>
+        <p class="nm">原種クロッカス<br>ロマンス</p><p class="pr">499<span>円〜</span></p>
+      </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/crocusprinceclaus/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/crocus/curcauprincess2.jpg" alt="クロッカス プリンスクラウス" loading="lazy"></div>
+        <p class="nm">クロッカス<br>プリンスクラウス</p><p class="pr">499<span>円〜</span></p>
+      </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/bu-inn20lati-1000/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/muscari/musucarilatifo10a.jpg" alt="ムスカリ ラティフォリューム" loading="lazy"></div>
+        <p class="nm">ムスカリ<br>ラティフォリューム</p><p class="pr">499<span>円〜</span></p>
+      </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/puschkinia1000/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/smallbulb/puschkiniatop.jpg" alt="プスキニア リバノチカ" loading="lazy"></div>
+        <p class="nm">プスキニア<br>リバノチカ</p><p class="pr">499<span>円〜</span></p>
+      </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/tulip_peppermintstick/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/tulip/peppermintstick_02.jpg" alt="原種系チューリップ ペパーミントスティック" loading="lazy"></div>
+        <p class="nm">原種系チューリップ<br>ペパーミント<br class="sp2">スティック</p><p class="pr">499<span>円〜</span></p>
+      </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/bu-srn22tulianik3b/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/tulip/annika_01.jpg" alt="原種系チューリップ アニカ" loading="lazy"></div>
+        <p class="nm">原種系チューリップ<br>アニカ</p><p class="pr">699<span>円〜</span></p>
+      </a>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="group-h rv"><h3>ちょっとめずらしい子</h3><span>お庭の主役に</span></div>
+    <a class="rare rv" href="https://item.rakuten.co.jp/wfgarden/bu-srn22ixiavirid/" target="_blank" rel="noopener">
+      <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/sirako/viridiflora_02.jpg" alt="原種イキシア ビリディフローラ" loading="lazy"></div>
+      <div>
+        <h4>原種イキシア<br>ビリディフローラ</h4>
+        <p>ひすい色の花びらに、まんなかの黒紫がくっきり 見つけたら手に入れたい希少な原種です</p>
+        <p class="pr">1,000<span>円〜</span></p>
+      </div>
+    </a>
+  </div>
+
+  <p class="price-note">※価格は掲載時点のものです。セット数を選べる商品は最小セットの価格を表示しています</p>
+</section>
+
+<!-- ===== 最後 ===== -->
+<section class="last">
+  <h2 class="h2 rv">これからも<br><span class="p">お庭のそばに</span></h2>
+  <p class="lead rv">20年間 ほんとうにありがとうございます<br>次の春も いっしょに咲かせましょう</p>
+  <div class="last-key rv">備考欄にわすれずに<b>ハッピーガーデン</b></div>
+  <div class="cta rv">
+    <a class="main" href="https://search.rakuten.co.jp/search/mall/%E7%90%83%E6%A0%B9/?sid=224591" target="_blank" rel="noopener">球根をもっと見る</a>
+    <a class="sub" href="https://www.rakuten.co.jp/wfgarden/" target="_blank" rel="noopener">ハッピーガーデン トップへ</a>
+  </div>
+
+  <div class="notes">
+    <h4>20周年プレゼントについて</h4>
+    <ul>
+      <li>ブラックフライデー期間中に、1回のご注文で合計3,000円（税込）以上お買い上げのお客様が対象です</li>
+      <li>ご注文時の備考欄に「ハッピーガーデン」の記入がないご注文は対象外となります</li>
+      <li>当選者様の発表は、プレゼントの発送をもってかえさせていただきます</li>
+      <li>キャンセル・返品となったご注文は対象外となります</li>
+      <li>プレゼントの苗は、季節や生育状況により品種が変わる場合があります</li>
+    </ul>
+  </div>
+  <p class="foot">HAPPY GARDEN 20th ANNIVERSARY</p>
+</section>
+
+</div>
+
+<script>
+(function(){
+  // スクロールで表示
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('on');});}
+
+  // 土をほる → キーワード
+  var dig=document.getElementById('dig'),btn=document.getElementById('btnDig'),msg=document.getElementById('copied');
+  var KEYWORD='ハッピーガーデン';
+  btn.addEventListener('click',function(){
+    if(!dig.classList.contains('open')){
+      dig.classList.add('open');
+      btn.textContent='キーワードをコピー';
+      return;
+    }
+    var done=function(){msg.textContent='コピーしました 備考欄に貼りつけてね';};
+    var fail=function(){msg.textContent='長押しでコピーしてね';};
+    try{
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(KEYWORD).then(done,fail);}
+      else{fail();}
+    }catch(e){fail();}
+  });
+})();
+</script>
+</body>
+</html>
