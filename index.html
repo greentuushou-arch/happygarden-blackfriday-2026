@@ -42,7 +42,17 @@ a{color:inherit;text-decoration:none}
 .en{font-family:"Jost",sans-serif;letter-spacing:.08em}
 
 /* ===== FV ===== */
-.fv{position:relative;padding:44px 0 0;color:var(--cream);text-align:center}
+.fv{position:relative;padding:44px 0 0;color:var(--cream);text-align:center;overflow:hidden}
+.fv>*{position:relative;z-index:1}
+/* 上から降るキラキラ花びら */
+.fv>.fv-fall{position:absolute;inset:0;z-index:2;pointer-events:none}
+.fall{position:absolute;top:-40px;animation:fallY linear infinite}
+.fall i{display:block;animation:swayX ease-in-out infinite alternate}
+.fall .pt{width:var(--s);height:calc(var(--s)*1.3);background:var(--c);border-radius:60% 0 60% 0;opacity:.9}
+.fall .kr{width:var(--s);height:var(--s);background:var(--c);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);animation:swayX ease-in-out infinite alternate,twinkle 1.6s ease-in-out infinite}
+@keyframes fallY{to{transform:translateY(var(--h,1100px))}}
+@keyframes swayX{from{transform:translateX(-18px) rotate(0)}to{transform:translateX(18px) rotate(220deg)}}
+@keyframes twinkle{0%,100%{opacity:.25;scale:.6}50%{opacity:1;scale:1.15}}
 .fv-top{display:flex;justify-content:space-between;align-items:center;padding:0 24px;font-size:15px}
 .fv-top .shop{font-weight:700;letter-spacing:.12em}
 .fv-top .th{font-family:"Jost";font-weight:600;color:var(--butter);letter-spacing:.14em}
@@ -207,6 +217,7 @@ a{color:inherit;text-decoration:none}
 
 <!-- ===== FV ===== -->
 <header class="fv">
+  <div class="fv-fall" id="fvFall" aria-hidden="true"></div>
   <div class="fv-top"><span class="shop">ハッピーガーデン</span><span class="th">THANK YOU 20th</span></div>
 
   <div class="fv-20"><b>20<sup>th</sup></b><span><em>ANNIVERSARY</em>ありがとうの<br>20周年</span></div>
@@ -440,6 +451,29 @@ a{color:inherit;text-decoration:none}
 
 <script>
 (function(){
+  // FV:上から降るキラキラ花びら
+  var fall=document.getElementById('fvFall');
+  if(fall&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){
+    var COLORS=['#f59ab2','#ffd76a','#fff7e8','#b7a3ee','#9ad8b3','#ffc2d1'];
+    var PETALS=16,SPARKLES=12,h=fall.offsetHeight+80;
+    var add=function(kind,i,total){
+      var w=document.createElement('span'),inner=document.createElement('i');
+      inner.className=kind;
+      var size=kind==='pt'?8+Math.random()*8:7+Math.random()*9;
+      w.className='fall';
+      w.style.left=((i+Math.random())/total*100)+'%';
+      w.style.setProperty('--h',h+'px');
+      w.style.animationDuration=(kind==='pt'?9:12)+Math.random()*7+'s';
+      w.style.animationDelay=(-Math.random()*16)+'s';
+      inner.style.setProperty('--s',size+'px');
+      inner.style.setProperty('--c',kind==='kr'?(Math.random()<.6?'#ffe58f':'#fff7e8'):COLORS[Math.floor(Math.random()*COLORS.length)]);
+      inner.style.animationDuration=2.4+Math.random()*2+'s'+(kind==='kr'?', '+(1.2+Math.random())+'s':'');
+      w.appendChild(inner);fall.appendChild(w);
+    };
+    for(var i=0;i<PETALS;i++)add('pt',i,PETALS);
+    for(var j=0;j<SPARKLES;j++)add('kr',j,SPARKLES);
+  }
+
   // スクロールで表示
   var els=document.querySelectorAll('.rv');
   if('IntersectionObserver' in window){
