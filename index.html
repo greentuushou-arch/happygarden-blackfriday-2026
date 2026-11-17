@@ -172,6 +172,30 @@ a{color:inherit;text-decoration:none}
 .rare .pr{font-family:"Jost";font-weight:700;font-size:26px;color:var(--red);margin-top:6px}
 .rare .pr span{font-size:.55em;font-family:"Zen Maru Gothic"}
 .price-note{margin-top:26px;font-size:14px;opacity:.8}
+/* ===== クーポン ===== */
+.coupon{background:var(--pink);color:var(--ink)}
+.coupon .kicker{color:#fff}
+.ticket{position:relative;margin:26px auto 0;max-width:560px;background:#fff;border-radius:22px;padding:28px 20px 30px;border:3px solid var(--ink);box-shadow:0 8px 0 var(--ink)}
+.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:34px;height:34px;margin-top:-17px;border-radius:50%;background:var(--pink);border:3px solid var(--ink)}
+.ticket::before{left:-19px;clip-path:inset(0 0 0 50%)}
+.ticket::after{right:-19px;clip-path:inset(0 50% 0 0)}
+.ticket .t1{font-size:20px;font-weight:700}
+.ticket .amt{display:flex;justify-content:center;align-items:flex-end;gap:6px;line-height:.8;margin-top:10px}
+.ticket .amt b{font-family:"Jost";font-size:min(34vw,160px);color:var(--red);letter-spacing:0}
+.ticket .amt small{font-size:min(9vw,44px);font-weight:700;margin-bottom:.15em}
+.ticket .t2{margin-top:14px;font-size:17px}
+.ticket .get{display:inline-block;margin-top:20px;background:var(--red);color:#fff;font-size:20px;font-weight:700;padding:16px 46px;border-radius:99px;box-shadow:0 5px 0 #b8304a}
+.coupon .note{margin-top:20px;font-size:15px}
+
+/* 先行予約 超早割 */
+.early{margin-top:20px;background:#fff;border:3px solid var(--red);border-radius:24px;padding:22px 16px 24px}
+.early-lead{font-size:18px;font-weight:700;color:var(--red)}
+.early-lead b{font-family:"Jost";font-size:1.3em}
+.early .grid{margin-top:16px;grid-template-columns:1fr 1fr}
+.off{display:inline-block;margin-top:6px;background:var(--red);color:#fff;font-family:"Jost";font-weight:700;font-size:16px;padding:1px 12px;border-radius:99px}
+.item .was{font-size:15px;opacity:.75;text-decoration:line-through;margin-top:2px}
+.set-desc{font-size:15px;margin-top:4px;line-height:1.6}
+
 
 /* ===== 最後 ===== */
 .last{background:var(--soil);color:var(--cream);text-align:center;padding:60px 20px 44px}
@@ -366,6 +390,19 @@ a{color:inherit;text-decoration:none}
   </div>
 </section>
 
+<!-- ===== クーポン ===== -->
+<section class="sec coupon">
+  <p class="kicker rv">BLACK FRIDAY COUPON</p>
+  <h2 class="h2 rv">ブラックフライデーの<br>クーポンも</h2>
+  <div class="ticket rv">
+    <p class="t1">ハッピーガーデンで使える</p>
+    <div class="amt"><b>96</b><small>円OFF</small></div>
+    <p class="t2">ブラックの「クロ」にちなんだ96円</p>
+    <a class="get" href="https://coupon.rakuten.co.jp/getCoupon?getkey=UVhHUS1GWUlPLURZU08tVDhXUQ--&rt=" target="_blank" rel="noopener">クーポンを獲得する</a>
+  </div>
+  <p class="note rv">※ご利用条件は<br class="sp2">クーポンページでご確認ください</p>
+</section>
+
 <!-- ===== おすすめ球根 ===== -->
 <section class="sec bulbs">
   <p class="kicker rv">RECOMMENDED BULBS</p>
@@ -455,37 +492,58 @@ a{color:inherit;text-decoration:none}
   </div>
 
   <div class="group">
-    <div class="group-h rv"><h3>クリスマスとお正月に</h3><span>飾る花も 贈る花も</span></div>
-    <div class="grid">
+    <div class="group-h rv"><h3>イングリッシュガーデンセット</h3><span>植えるだけでお庭が完成</span></div>
+    <div class="big">
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/omakase-english8p/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/hananae/englishgarden/9nae/ing10_02.jpg" alt="イングリッシュガーデン花苗10苗セット" loading="lazy"></div>
+        <p class="nm">イングリッシュ<br>ガーデン 10苗セット</p>
+        <p class="set-desc">花壇に植えるだけ<br>配置マップ付き</p>
+        <p class="pr">6,600<span>円</span></p>
+      </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/omakase-englishpot8p/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/hananae/englishgarden/containering/imgrc0163780747.jpg" alt="鉢植えで楽しめるイングリッシュガーデンセット" loading="lazy"></div>
+        <p class="nm">イングリッシュ<br>ガーデン 鉢植えセット</p>
+        <p class="set-desc">花苗4＋チューリップ3<br>＋小球根3</p>
+        <p class="pr">3,000<span>円</span></p>
+      </a>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="group-h rv"><h3>お正月＆お歳暮 先行予約</h3><span>超早割は11月30日まで</span></div>
+    <div class="early rv">
+      <p class="early-lead">先行予約で <b>20%OFF</b></p>
+      <div class="grid">
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/980105/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/hanahachi/katomatu/kadomatuyose_24_04.jpg" alt="門松の寄せ植え 梅の木入り" loading="lazy"></div>
+        <p class="nm">門松の寄せ植え<br>梅の木入り 8号</p>
+        <span class="off">20%OFF</span>
+        <p class="was">12,400円</p>
+        <p class="pr">9,900<span>円</span></p>
+      </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/yoseuekeironohi/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/keironohi/hanademari/imgrc0084023911.jpg" alt="新春の花でまり 和風寄せ植え" loading="lazy"></div>
+        <p class="nm">新春の花でまり<br>和風寄せ植え 8号</p>
+        <span class="off">20%OFF</span>
+        <p class="was">12,400円</p>
+        <p class="pr">9,900<span>円</span></p>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="group-h rv"><h3>クリスマスに</h3><span>飾って楽しむツリー</span></div>
+    <div class="big">
       <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/828271/" target="_blank" rel="noopener">
         <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/indoorplants/bunnyconifer_00.jpg" alt="ウサギのコニファー" loading="lazy"></div>
-        <p class="nm">ウサギのコニファー<br>デコレーション付き</p><p class="pr">8,800<span>円〜</span></p>
-        <span class="pt">クリスマスに</span>
+        <p class="nm">ウサギのコニファー<br>デコレーション付き</p>
+        <p class="pr">8,800<span>円〜</span></p>
       </a>
       <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/918405/" target="_blank" rel="noopener">
         <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/indoorplants/goldcrest_02.jpg" alt="ゴールドクレスト ウィルマ" loading="lazy"></div>
-        <p class="nm">ゴールドクレスト<br>ウィルマ 6号</p><p class="pr">3,630<span>円〜</span></p>
-        <span class="pt">クリスマスに</span>
-      </a>
-      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/980105/" target="_blank" rel="noopener">
-        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/hanahachi/katomatu/kadomatuyose_24_04.jpg" alt="門松の寄せ植え 梅の木入り" loading="lazy"></div>
-        <p class="nm">門松の寄せ植え<br>梅の木入り 8号</p><p class="pr">9,900<span>円</span></p>
-        <span class="pt">12月下旬から発送</span>
-      </a>
-      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/yoseuekeironohi/" target="_blank" rel="noopener">
-        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/keironohi/hanademari/imgrc0084023911.jpg" alt="新春 花でまり 和風寄せ植え" loading="lazy"></div>
-        <p class="nm">新春 花でまり<br>和風寄せ植え 8号</p><p class="pr">9,900<span>円</span></p>
-        <span class="pt">お正月に</span>
-      </a>
-      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/omakase-english8p/" target="_blank" rel="noopener">
-        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/hananae/englishgarden/9nae/ing10_02.jpg" alt="イングリッシュガーデン花苗10苗セット" loading="lazy"></div>
-        <p class="nm">イングリッシュ<br>ガーデン 花苗10苗</p><p class="pr">6,600<span>円</span></p>
-        <span class="pt">配置マップ付き</span>
-      </a>
-      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/omakase-englishpot8p/" target="_blank" rel="noopener">
-        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/hananae/englishgarden/containering/imgrc0163780747.jpg" alt="コンテナで楽しむイングリッシュガーデン4苗セット" loading="lazy"></div>
-        <p class="nm">イングリッシュ<br>ガーデン コンテナ4苗</p><p class="pr">3,000<span>円</span></p>
-        <span class="pt">ベランダや玄関に</span>
+        <p class="nm">ゴールドクレスト<br>ウィルマ 6号</p>
+        <p class="pr">3,630<span>円〜</span></p>
       </a>
     </div>
   </div>
