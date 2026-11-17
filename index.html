@@ -163,11 +163,12 @@ a{color:inherit;text-decoration:none}
 .big .item .nm{font-size:17px}
 .big .item .pr{font-size:28px}
 .item .pt{display:inline-block;margin-top:4px;font-size:14px;font-weight:700;color:var(--leaf-d);border:1.5px solid var(--leaf);border-radius:99px;padding:0 9px}
-.rare{margin:20px auto 0;display:flex;flex-direction:column;align-items:center;gap:14px;max-width:480px}
-.rare .ph{width:min(70%,280px);aspect-ratio:1/1;background:#fff;border-radius:50%;overflow:hidden;border:3px solid var(--mint)}
+.rares{margin:20px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:620px}
+.rare{display:flex;flex-direction:column;align-items:center;gap:12px}
+.rare .ph{width:min(86%,240px);aspect-ratio:1/1;background:#fff;border-radius:50%;overflow:hidden;border:3px solid var(--mint)}
 .rare .ph img{width:100%;height:100%;object-fit:contain}
 .rare h4{font-size:22px;line-height:1.5}
-.rare p{font-size:17px;margin-top:6px}
+.rare p{font-size:16px;margin-top:6px}
 .rare .pr{font-family:"Jost";font-weight:700;font-size:26px;color:var(--red);margin-top:6px}
 .rare .pr span{font-size:.55em;font-family:"Zen Maru Gothic"}
 .price-note{margin-top:26px;font-size:14px;opacity:.8}
@@ -203,6 +204,10 @@ a{color:inherit;text-decoration:none}
   .step p{text-align:left;margin-top:2px}
   .gift{padding:16px 14px 22px}
   .grid{grid-template-columns:repeat(2,1fr)}
+  .grid .item:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 7px)}
+  .rares{gap:12px}
+  .rare h4{font-size:18px}
+  .rare p{font-size:15px}
   .big{grid-template-columns:1fr 1fr;gap:12px}
   .big .item .nm{font-size:16px}
   .big .item .pr{font-size:24px}
@@ -392,39 +397,97 @@ a{color:inherit;text-decoration:none}
         <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/crocus/romance2_01.jpg" alt="原種クロッカス ロマンス" loading="lazy"></div>
         <p class="nm">原種クロッカス<br>ロマンス</p><p class="pr">499<span>円〜</span></p>
       </a>
-      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/crocusprinceclaus/" target="_blank" rel="noopener">
-        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/crocus/curcauprincess2.jpg" alt="クロッカス プリンスクラウス" loading="lazy"></div>
-        <p class="nm">クロッカス<br>プリンスクラウス</p><p class="pr">499<span>円〜</span></p>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/minitete-a-tete/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/narcissus/tetatetaimg2.jpg" alt="ミニ水仙 テタテタ" loading="lazy"></div>
+        <p class="nm">ミニ水仙<br>テタテタ</p><p class="pr">847<span>円〜</span></p>
       </a>
       <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/bu-inn20lati-1000/" target="_blank" rel="noopener">
         <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/muscari/musucarilatifo10a.jpg" alt="ムスカリ ラティフォリューム" loading="lazy"></div>
         <p class="nm">ムスカリ<br>ラティフォリューム</p><p class="pr">499<span>円〜</span></p>
       </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/muscarimountainlady7p/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/muscari/mountainlady_01.jpg" alt="ムスカリ マウンテンレディ" loading="lazy"></div>
+        <p class="nm">ムスカリ<br>マウンテンレディ</p><p class="pr">499<span>円〜</span></p>
+      </a>
       <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/puschkinia1000/" target="_blank" rel="noopener">
         <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/smallbulb/puschkiniatop.jpg" alt="プスキニア リバノチカ" loading="lazy"></div>
         <p class="nm">プスキニア<br>リバノチカ</p><p class="pr">499<span>円〜</span></p>
+      </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/bu-sry22anemyae1/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/sirako/anemoneyae_04.jpg" alt="アネモネ モナークMix" loading="lazy"></div>
+        <p class="nm">アネモネ<br>モナークMix 20ml</p><p class="pr">1,100<span>円</span></p>
       </a>
       <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/tulip_peppermintstick/" target="_blank" rel="noopener">
         <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/tulip/peppermintstick_02.jpg" alt="原種系チューリップ ペパーミントスティック" loading="lazy"></div>
         <p class="nm">原種系チューリップ<br>ペパーミント<br class="sp2">スティック</p><p class="pr">499<span>円〜</span></p>
       </a>
-      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/bu-srn22tulianik3b/" target="_blank" rel="noopener">
-        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/tulip/annika_01.jpg" alt="原種系チューリップ アニカ" loading="lazy"></div>
-        <p class="nm">原種系チューリップ<br>アニカ</p><p class="pr">699<span>円〜</span></p>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/bu-sr22tulisama3b/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/tulip/samantha_01.jpg" alt="原種系チューリップ サマンサ" loading="lazy"></div>
+        <p class="nm">原種系チューリップ<br>サマンサ</p><p class="pr">541<span>円〜</span></p>
+      </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/bu-srn22tulired7b/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/tulip/hilde_01.jpg" alt="原種チューリップ ヒルデ" loading="lazy"></div>
+        <p class="nm">原種チューリップ<br>ヒルデ</p><p class="pr">572<span>円〜</span></p>
       </a>
     </div>
   </div>
 
   <div class="group">
     <div class="group-h rv"><h3>ちょっとめずらしい子</h3><span>お庭の主役に</span></div>
-    <a class="rare rv" href="https://item.rakuten.co.jp/wfgarden/bu-srn22ixiavirid/" target="_blank" rel="noopener">
-      <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/sirako/viridiflora_02.jpg" alt="原種イキシア ビリディフローラ" loading="lazy"></div>
-      <div>
-        <h4>原種イキシア<br>ビリディフローラ</h4>
-        <p>ひすい色の花びらに、まんなかの黒紫がくっきり 見つけたら手に入れたい希少な原種です</p>
-        <p class="pr">1,000<span>円〜</span></p>
-      </div>
-    </a>
+    <div class="rares">
+      <a class="rare rv" href="https://item.rakuten.co.jp/wfgarden/bu-srn22ixiavirid/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/sirako/viridiflora_02.jpg" alt="原種イキシア ビリディフローラ" loading="lazy"></div>
+        <div>
+          <h4>原種イキシア<br>ビリディフローラ</h4>
+          <p>ひすい色の花に<br>黒紫の目がくっきり</p>
+          <p class="pr">1,000<span>円〜</span></p>
+        </div>
+      </a>
+      <a class="rare rv" href="https://item.rakuten.co.jp/wfgarden/dicheloscongestum/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/fallbulb/sirako/dikerostenma_07.jpg" alt="ディケロステンマ" loading="lazy"></div>
+        <div>
+          <h4>ディケロ<br>ステンマ</h4>
+          <p>ふくらんだ花の裾が<br>くるんと返る</p>
+          <p class="pr">499<span>円〜</span></p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="group-h rv"><h3>クリスマスとお正月に</h3><span>飾る花も 贈る花も</span></div>
+    <div class="grid">
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/828271/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/indoorplants/bunnyconifer_00.jpg" alt="ウサギのコニファー" loading="lazy"></div>
+        <p class="nm">ウサギのコニファー<br>デコレーション付き</p><p class="pr">8,800<span>円〜</span></p>
+        <span class="pt">クリスマスに</span>
+      </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/918405/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/indoorplants/goldcrest_02.jpg" alt="ゴールドクレスト ウィルマ" loading="lazy"></div>
+        <p class="nm">ゴールドクレスト<br>ウィルマ 6号</p><p class="pr">3,630<span>円〜</span></p>
+        <span class="pt">クリスマスに</span>
+      </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/980105/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/hanahachi/katomatu/kadomatuyose_24_04.jpg" alt="門松の寄せ植え 梅の木入り" loading="lazy"></div>
+        <p class="nm">門松の寄せ植え<br>梅の木入り 8号</p><p class="pr">9,900<span>円</span></p>
+        <span class="pt">12月下旬から発送</span>
+      </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/yoseuekeironohi/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/keironohi/hanademari/imgrc0084023911.jpg" alt="新春 花でまり 和風寄せ植え" loading="lazy"></div>
+        <p class="nm">新春 花でまり<br>和風寄せ植え 8号</p><p class="pr">9,900<span>円</span></p>
+        <span class="pt">お正月に</span>
+      </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/omakase-english8p/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/hananae/englishgarden/9nae/ing10_02.jpg" alt="イングリッシュガーデン花苗10苗セット" loading="lazy"></div>
+        <p class="nm">イングリッシュ<br>ガーデン 花苗10苗</p><p class="pr">6,600<span>円</span></p>
+        <span class="pt">配置マップ付き</span>
+      </a>
+      <a class="item rv" href="https://item.rakuten.co.jp/wfgarden/omakase-englishpot8p/" target="_blank" rel="noopener">
+        <div class="ph"><img src="https://shop.r10s.jp/wfgarden/cabinet/hananae/englishgarden/containering/imgrc0163780747.jpg" alt="コンテナで楽しむイングリッシュガーデン4苗セット" loading="lazy"></div>
+        <p class="nm">イングリッシュ<br>ガーデン コンテナ4苗</p><p class="pr">3,000<span>円</span></p>
+        <span class="pt">ベランダや玄関に</span>
+      </a>
+    </div>
   </div>
 
   <p class="price-note">※価格は掲載時点のものです。セット数を選べる商品は最小セットの価格を表示しています</p>
